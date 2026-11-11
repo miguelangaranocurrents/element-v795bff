@@ -167,6 +167,12 @@
     padding-top: 0;
 }
 
+/* The edit composer's autocomplete renders above the composer, so the body
+   slot must not clip it while editing. */
+.root.stateEditing .slotBody > * {
+    overflow: visible;
+}
+
 .root.stateEditing .slotTimestamp {
     visibility: hidden;
 }
